@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteTracker Register</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/286a30b4f5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="sub-header3">
+      <nav>
+        <a href="/"> <img src="static/images/logo_4.png" /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lost">Lost</a></li>
+            <li><a href="/found">Found</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="#" id="signin-btn">Sign In</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="text-box2">
+        <h1>Register</h1>
+      </div>
+    </section>
+    <div class="register-container">
+      <h1 class="register-title">Register Lost/Found Item</h1>
+      <form id="register-form">
+        <!-- Lost/Found Selection -->
+        <div class="form-group">
+          <label>
+            <input
+              type="checkbox"
+              id="lost-checkbox"
+              name="lost-found"
+              value="lost"
+            />
+            Lost
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="found-checkbox"
+              name="lost-found"
+              value="found"
+            />
+            Found
+          </label>
+        </div>
+
+        <!-- Type of Object -->
+        <div class="form-group">
+          <label for="type">Type of Object</label>
+          <textarea
+            id="type"
+            name="type_of_object"
+            placeholder="Type of Object"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Location -->
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <select id="location" name="location" required>
+            <option value="">Select Location</option>
+            <option value="frem">Frem</option>
+            <option value="elrc">ELRC</option>
+            <option value="zakhem">Zakhem</option>
+            <option value="science">Science</option>
+            <option value="bassil">Bassil</option>
+            <option value="lounge">Lounge</option>
+            <option value="old-caff">Old Caff</option>
+            <option value="medical-building">Medical Building</option>
+            <option value="library">Library</option>
+            <option value="block-a">Block A</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Describe the item"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="form-group">
+          <label for="item-image">Upload Image:</label>
+          <input type="file" id="item-image" name="image_url" />
+          <small id="image-hint">(Optional for Lost, Required for Found)</small>
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date_posted" required />
+        </div>
+
+        <!-- Verification Question and Answer (Visible for Found Only) -->
+        <div class="form-group" id="verification-fields" style="display: none;">
+          <label for="verification-question">Verification Question:</label>
+          <textarea
+            id="verification-question"
+            name="verification_question"
+            placeholder="Enter a verification question"
+            required
+          ></textarea>
+
+          <label for="expected-answer">Expected Answer:</label>
+          <textarea
+            id="expected-answer"
+            name="expected_answer"
+            placeholder="Enter the expected answer"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-button" class="register-submit-btn">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <div id="signin-modal" class="modal1">
+      <div class="modal1-content">
+        <span class="close" id="close-signin">&times;</span>
+        <h2>Sign In</h2>
+  
+        <form id = "signin-form">
+          <input type="email" id = "email" placeholder="Email" required/>
+          <input type="password" id = "password" placeholder="Password" required/>    <!-- modal1-->
+          <button type="submit" id = "submit-in">Sign In</button>
+        </form>
+        <div id = "signin-response"></div>
+      </div>
+    </div>
+    </body>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

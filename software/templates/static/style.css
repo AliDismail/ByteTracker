@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+}
+
+/*---------header------*/
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(75, 196, 39, 0.4),
+      rgba(3, 68, 30, 0.8)
+    ),
+    url(images/LAU_Campus_1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+nav img {
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(3, 3, 53);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: white;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid rgb(3, 3, 53);
+  background: rgb(3, 3, 53);
+  transition: 1s;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*-------Courses-------*/
+
+.course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-col {
+  flex: 1 1 calc(33.33% - 20px); /* Ensure 3 items per row with spacing */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  max-width: calc(33.33% - 20px); /* Ensure items don't exceed 3 per row */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+  padding: 15px; /* Optional: Add padding */
+  border: 1px solid #ddd; /* Optional: Add a border */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  text-align: center; /* Optional: Center-align text */
+  background: #7fee91;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.course-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*--------footer---------*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background: linear-gradient(rgba(75, 196, 39, 0.4), rgba(3, 68, 30, 0.8));
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.icons i {
+  color: rgb(3, 3, 53);
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.fa-heart {
+  color: red;
+}
+
+/*------Dialoge boxes of sign in and register--------*/
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal1-content {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  margin: 15% auto;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal1 input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: rgb(37, 209, 180);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(37, 209, 180);
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*----scrol-up button-------*/
+.scroll-up {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 5px; /* Distance from the right of the screen */
+  background-color: rgb(3, 3, 53); /* Button background */
+  color: white; /* Arrow color */
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+  font-size: 25px; /* Size of the arrow */
+  text-align: center; /* Center the text horizontally */
+  line-height: 50%; /* Center the text vertically (same as height) */
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
+}
+
+.scroll-up:hover {
+  background-color: rgb(37, 37, 131);
+}
+
+/*---------sub-header-------*/
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(75, 196, 39, 0.4),
+      rgba(3, 68, 30, 0.8)
+    ),
+    url(images/LAU_Campus2.jpg);
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.text-box2 {
+  width: 50%;
+  color: #fff;
+  position: absolute;
+  top: 40%; /* Adjusted to move the title higher */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-box2 h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.search-header {
+  font-size: 25px;
+}
+
+/*--------search bar--------*/
+.search-bar form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 650px;
+  border: 2px solid #d3ffd5;
+  border-radius: 25px;
+  padding: 2px;
+  background-color: rgb(219, 250, 206);
+}
+
+.search-bar input[type="text"] {
+  flex: 1; /* Fills the available space */
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px 0 0 25px; /* Round the left side */
+}
+
+.search-bar button {
+  background-color: #1b0574;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0; /* Round the right side */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #30b66c; /* Lighter shade on hover */
+}
+
+#srch-btn {
+  border-top-right-radius: 0; /* Remove top-right corner rounding */
+  border-bottom-right-radius: 0; /* Remove bottom-right corner rounding */
+}
+#srch-btn-found {
+  border-top-right-radius: 0; /* Remove top-right corner rounding */
+  border-bottom-right-radius: 0; /* Remove bottom-right corner rounding */
+}
+
+#display-all-btn {
+  border-top-left-radius: 0; /* Remove top-left corner rounding */
+  border-bottom-left-radius: 0; /* Remove bottom-left corner rounding */
+}
+
+#search-results {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Add spacing between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Filters Bar */
+.filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 650px;
+  border: 2px solid #d3ffd5;
+  border-radius: 25px;
+  padding: 2px;
+  background-color: rgb(219, 250, 206);
+}
+
+/* Individual Filter Elements */
+.filters-bar label {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between checkbox and label text */
+  font-size: 14px;
+  color: #333;
+}
+
+/* Dropdown Style */
+#location-filter {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+/*--------Register-----*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Ensures it stays in place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers the modal */
+  width: 60%; /* Responsive width (adjust as needed) */
+  max-width: 800px; /* Limits the modal width */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Allows scrolling if content exceeds viewport height */
+}
+
+.modal-content {
+  max-height: 80vh; /* Ensures modal fits within the viewport */
+  overflow-y: auto; /* Adds scrolling if needed */
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-link {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.tab-link.active {
+  background-color: #333;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between fields */
+  width: 100%; /* Adjust width to fit container */
+}
+
+.modal form label {
+  width: 100%; /* Ensures uniform width */
+  box-sizing: border-box; /* Prevents padding from affecting field size */
+}
+
+.modal input,
+.modal select,
+.modal textarea,
+.modal button {
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  width: 100%; /* Ensures uniform width */
+  box-sizing: border-box; /* Prevents padding from affecting field size */
+  border: 1px solid;
+}
+
+/* Register Page Specific Styles */
+.register-container {
+  width: 60%;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.register-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* File Input Styling */
+#item-image {
+  padding: 5px;
+  font-size: 14px;
+}
+
+#image-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Submit Button Styling */
+.register-submit-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Header Section Styling */
+.sub-header3 {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(75, 196, 39, 0.4),
+      rgba(3, 68, 30, 0.8)
+    ),
+    url(images/LAU_Campus2.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  position: relative;
+}

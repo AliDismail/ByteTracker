@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteTracker Home</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/286a30b4f5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="/"> <img src="static/images/logo_4.png" /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lost">Lost</a></li>
+            <li><a href="/found">Found</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="#" id="signin-btn">Sign In</a></li>
+          </ul>
+          <ul class="nav-right"></ul>
+        </div>
+      </nav>
+
+      <div class="text-box">
+        <h1>You Lost It?<br> We probably Have It!</h1>
+        <p>
+          You lost you phone? Calculator? Your seven generation family necklace? Dont worry we are here to help you!! Just with this easy steps you could find your missing object or the owner of what you found. 
+        </p>
+        <a href="" class="hero-btn">Visit Us to Know More</a>
+      </div>
+
+
+    </header>
+    </section>
+
+    <section class="course">
+      <h1>Latest Lost Items</h1>
+      <p>Here you will find the latest lost items.</p>
+      <div id="latest-lost-items" class="row">
+        <!-- Lost items will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section class="course">
+      <h1>Latest Found Items</h1>
+      <p>Here you will find the latest found items.</p>
+      <div id="latest-found-items" class="row">
+        <!-- Found items will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        This is our Data Structures and Algorithms Lab project,<br> from our team members, Ali Ismail, Karim Sakr, and Christopher Farah our deepest gratitude
+      </p>
+
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made with <i class="fa-solid fa-heart"></i> me</p>
+    </section>
+    <button id="scroll-up-btn" class="scroll-up">↑</button>
+
+    <!-- Registration modal 
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-register">&times;</span>
+        <h2>Register</h2>
+        <form>
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button type="submit" id="submit-reg">Register</button>
+        </form>
+      </div>
+    </div> -->
+
+
+
+    <!--
+    //Sign up modal
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-signup">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Verify Password"/>
+          <button type="submit" id="submit-up">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  -->
+
+
+  <div id="signin-modal" class="modal1">
+    <div class="modal1-content">
+      <span class="close" id="close-signin">&times;</span>
+      <h2>Sign In</h2>
+
+      <form id = "signin-form">
+        <input type="email" id = "email" placeholder="Email" required/>
+        <input type="password" id = "password" placeholder="Password" required/>    <!-- modal1-->
+        <button type="submit" id = "submit-in">Sign In</button>
+      </form>
+      <div id = "signin-response"></div>
+    </div>
+  </div>
+  </body>
+
+  <script src="/static/script.js"></script>
+</html>
