@@ -23,6 +23,11 @@ Once a match is made, ByteTrackers facilitates secure communication between the 
 This project offers university students a secure and reliable platform to easily find and return their lost belongings.
 Whether it’s a textbook, wallet, or laptop, students can report lost items, search for found items, and connect with others in a safe and efficient way.
 
+## Team Members
+Ali Ismail (Frontend)
+Karim Sakr (DataBase/Backend)
+Christopher Farah (Backend)
+
 **PS: Stay tuned for updates—we’re just getting started**
 
 
